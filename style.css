@@ -685,6 +685,46 @@ body::before {
 }
 
 /* Responsiveness */
+
+/* Scroll indicator (hero) */
+.scroll-indicator {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 40px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 1px;
+    z-index: 12;
+}
+
+.scroll-indicator .scroll-dot {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 0;
+    width: 6px;
+    height: 6px;
+    background: rgba(0,0,0,1);
+    border-radius: 50%;
+    display: block;
+    animation: scrollDot 1.5s linear infinite;
+}
+
+@keyframes scrollDot {
+    0% { transform: translate(-50%, 0); opacity: 1; }
+    100% { transform: translate(-50%, 30px); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .scroll-indicator .scroll-dot {
+        animation: none !important;
+        opacity: 1;
+    }
+}
+
+
 @media (max-width: 768px) {
     .canvas {
         width: 100%;
