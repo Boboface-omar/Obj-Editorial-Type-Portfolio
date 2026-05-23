@@ -595,8 +595,8 @@ body::before {
 }
 
 .specialization {
-    margin-bottom: 8px;
-    text-align: right;
+    margin-bottom: 25px;
+    text-align: left;
     font-size: 11px;
     line-height: 1.8;
     letter-spacing: 0.5px;
@@ -605,7 +605,7 @@ body::before {
 .bottom-left {
     position: absolute;
     bottom: 80px;
-    left: 80px;
+    left: 90px;
     z-index: 10;
 }
 
@@ -669,10 +669,10 @@ body::before {
 
 .bottom-right {
     position: absolute;
-    bottom: 80px;
-    right: 80px;
+    bottom: 150px;
+    right: 90px;
     z-index: 10;
-    text-align: right;
+    text-align: left;
 }
 
 .bottom-right h2 {
@@ -681,7 +681,7 @@ body::before {
     line-height: 1;
     font-weight: 700;
     text-transform: uppercase;
-    text-align: right;
+    text-align: left;
 }
 
 /* Responsiveness */
