@@ -594,12 +594,16 @@ body::before {
     100% { transform: scale(3); opacity: 0; }
 }
 
-.specialization {
-    margin-top: 8px;
-    text-align: right;
+.description {
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    text-align: left;
     font-size: 11px;
     line-height: 1.8;
     letter-spacing: 0.5px;
+    z-index: 10;
+    max-width: 250px;
 }
 
 .bottom-left {
