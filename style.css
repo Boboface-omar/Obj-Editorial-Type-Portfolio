@@ -554,23 +554,23 @@ body::before {
 .status-badge {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     background: rgba(255, 255, 255, 0.8);
-    padding: 8px 16px;
-    border-radius: 100px;
-    font-size: 10px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 13px; /* minimum 13px for improved readability */
     font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border: 1px solid rgba(0,0,0,0.05);
+    text-transform: none;
+    letter-spacing: 0.03em; /* reduced letter-spacing for natural feel */
+    border: 1px solid rgba(0,0,0,0.12);
     margin-bottom: 25px;
     backdrop-filter: blur(5px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.02);
 }
 
 .status-dot {
-    width: 7px;
-    height: 7px;
+    width: 8px;
+    height: 8px;
     background-color: #22c55e;
     border-radius: 50%;
     position: relative;
@@ -585,6 +585,7 @@ body::before {
     height: 100%;
     background-color: #22c55e;
     border-radius: 50%;
+    transform-origin: center;
     animation: pulseGlow 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
 }
 
@@ -607,7 +608,7 @@ body::before {
 
 .bottom-left {
     position: absolute;
-    bottom: 10px;
+    bottom: 80px;
     left: 80px;
     z-index: 10;
 }
