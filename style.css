@@ -594,16 +594,12 @@ body::before {
     100% { transform: scale(3); opacity: 0; }
 }
 
-.description {
-    position: absolute;
-    top: 50%;
-    right: 15%;
-    text-align: left;
+.specialization {
+    margin-bottom: 8px;
+    text-align: right;
     font-size: 11px;
     line-height: 1.8;
     letter-spacing: 0.5px;
-    z-index: 10;
-    max-width: 250px;
 }
 
 .bottom-left {
@@ -673,7 +669,7 @@ body::before {
 
 .bottom-right {
     position: absolute;
-    bottom: 10px;
+    bottom: 80px;
     right: 80px;
     z-index: 10;
     text-align: right;
@@ -685,7 +681,7 @@ body::before {
     line-height: 1;
     font-weight: 700;
     text-transform: uppercase;
-    text-align: left;
+    text-align: right;
 }
 
 /* Responsiveness */
