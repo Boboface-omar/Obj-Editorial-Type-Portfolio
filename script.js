@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const tl = gsap.timeline({ defaults: { ease: "power4.out", duration: 1.5 } });
 
     // Initial state
-    gsap.set([".logo", ".nav-links li", ".contact-btn", ".bg-text", ".portrait-container", ".status-badge", ".bottom-left h1", ".hero-btns", ".bottom-right h2", ".description"], {
+    gsap.set([".logo", ".nav-links li", ".contact-btn", ".bg-text", ".portrait-container", ".status-badge", ".bottom-left h1", ".hero-btns", ".bottom-right h2", ".specialization"], {
         opacity: 0
     });
 
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .to(".bottom-left h1", { opacity: 1, y: 0, startAt: { y: 50 } }, "-=0.8")
       .to(".hero-btns", { opacity: 1, y: 0, startAt: { y: 30 } }, "-=0.6")
       .to(".bottom-right h2", { opacity: 1, y: 0, startAt: { y: 50 } }, "-=0.8")
-      .to(".description", { opacity: 1, x: 0, startAt: { x: 30 } }, "-=1.0");
+      .to(".specialization", { opacity: 1, x: 0, startAt: { x: 30 } }, "-=1.0");
 
     // General Mouse Move Effects
     document.addEventListener('mousemove', (e) => {

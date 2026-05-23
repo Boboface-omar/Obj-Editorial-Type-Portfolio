@@ -414,6 +414,45 @@ body::before {
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
+/* Scroll indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 28px;
+    height: 44px;
+    border: 2px solid rgba(0,0,0,0.18);
+    border-radius: 18px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 6px;
+    background: transparent;
+    opacity: 1;
+    pointer-events: none;
+}
+
+.scroll-indicator .scroll-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--text-black);
+    border-radius: 50%;
+    display: block;
+    transform: translateY(0);
+    animation: scrollDot 1.6s ease-in-out infinite;
+}
+
+@keyframes scrollDot {
+    0% { transform: translateY(0); opacity: 1; }
+    50% { transform: translateY(12px); opacity: 0.6; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .scroll-indicator { display: none; }
+}
+
 @media (max-width: 768px) {
     .footer {
         flex-direction: column;
@@ -605,7 +644,7 @@ body::before {
 .bottom-left {
     position: absolute;
     bottom: 80px;
-    left: 90px;
+    left: 100px;
     z-index: 10;
 }
 
@@ -670,7 +709,7 @@ body::before {
 .bottom-right {
     position: absolute;
     bottom: 150px;
-    right: 90px;
+    right: 200px;
     z-index: 10;
     text-align: left;
 }
@@ -685,46 +724,6 @@ body::before {
 }
 
 /* Responsiveness */
-
-/* Scroll indicator (hero) */
-.scroll-indicator {
-    position: absolute;
-    bottom: 24px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 1px;
-    height: 40px;
-    background: rgba(0,0,0,0.3);
-    border-radius: 1px;
-    z-index: 12;
-}
-
-.scroll-indicator .scroll-dot {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-    top: 0;
-    width: 6px;
-    height: 6px;
-    background: rgba(0,0,0,1);
-    border-radius: 50%;
-    display: block;
-    animation: scrollDot 1.5s linear infinite;
-}
-
-@keyframes scrollDot {
-    0% { transform: translate(-50%, 0); opacity: 1; }
-    100% { transform: translate(-50%, 30px); opacity: 0; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .scroll-indicator .scroll-dot {
-        animation: none !important;
-        opacity: 1;
-    }
-}
-
-
 @media (max-width: 768px) {
     .canvas {
         width: 100%;
